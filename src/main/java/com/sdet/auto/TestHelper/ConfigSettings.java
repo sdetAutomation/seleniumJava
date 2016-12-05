@@ -6,8 +6,24 @@ import java.util.Properties;
 
 public class ConfigSettings {
 
-    public static String webUrl;
-    public static String webBrowser;
+    public static String getWebUrl() {
+        return webUrl;
+    }
+
+    public static void setWebUrl(String webUrl) {
+        ConfigSettings.webUrl = webUrl;
+    }
+
+    public static String getWebBrowser() {
+        return webBrowser;
+    }
+
+    public static void setWebBrowser(String webBrowser) {
+        ConfigSettings.webBrowser = webBrowser;
+    }
+
+    private static String webUrl;
+    private static String webBrowser;
 
     public void getConfigSettings() throws IOException {
 
@@ -16,12 +32,12 @@ public class ConfigSettings {
         InputStream inputStream = getClass().getClassLoader().getResourceAsStream(propFileName);
         property.load(inputStream);
 
-        webUrl = property.getProperty("webUrl");
-        webBrowser = property.getProperty("webBrowser");
+        setWebUrl(property.getProperty("webUrl"));
+        setWebBrowser(property.getProperty("webBrowser"));
 
         IoLibrary.writeLine("Test Config Settings");
-        System.out.println(String.format("WebUrl: %s", webUrl));
-        System.out.println(String.format("WebBrowser: %s", webBrowser));
+        System.out.println("WebUrl: " + getWebUrl());
+        System.out.println("WebBrowser: " + getWebBrowser());
         IoLibrary.writelineEnd();
     }
 }
