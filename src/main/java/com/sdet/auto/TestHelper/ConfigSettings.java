@@ -36,8 +36,8 @@ public class ConfigSettings {
         setWebBrowser(property.getProperty("webBrowser"));
 
         IoLibrary.writeLine("Test Config Settings");
-        System.out.println("WebUrl: " + getWebUrl());
-        System.out.println("WebBrowser: " + getWebBrowser());
+        System.out.println(String.format("WebUrl: %s", getWebUrl()));
+        System.out.println(String.format("WebBrowser: %s", getWebBrowser()));
         IoLibrary.writelineEnd();
     }
 }
