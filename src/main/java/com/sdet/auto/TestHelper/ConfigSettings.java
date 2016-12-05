@@ -22,8 +22,8 @@ public class ConfigSettings {
         ConfigSettings.webBrowser = webBrowser;
     }
 
-    public static String webUrl;
-    public static String webBrowser;
+    private static String webUrl;
+    private static String webBrowser;
 
     public void getConfigSettings() throws IOException {
 
@@ -36,8 +36,8 @@ public class ConfigSettings {
         setWebBrowser(property.getProperty("webBrowser"));
 
         IoLibrary.writeLine("Test Config Settings");
-        System.out.println(String.format("WebUrl: %s", webUrl));
-        System.out.println(String.format("WebBrowser: %s", webBrowser));
+        System.out.println(String.format("WebUrl: %s", getWebUrl()));
+        System.out.println(String.format("WebBrowser: %s", getWebBrowser()));
         IoLibrary.writelineEnd();
     }
 }
