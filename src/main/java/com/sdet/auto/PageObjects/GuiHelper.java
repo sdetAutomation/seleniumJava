@@ -2,7 +2,6 @@ package com.sdet.auto.PageObjects;
 
 import com.sdet.auto.SeleniumExtensions.WebDriverBase;
 import com.sdet.auto.TestHelper.ConfigSettings;
-import jdk.nashorn.internal.runtime.regexp.joni.Config;
 
 import static com.sdet.auto.SeleniumExtensions.WebDriverBase.GetWebDriver;
 
