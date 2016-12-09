@@ -3,4 +3,3 @@ sudo: false
 script:
 - mvn clean
 - mvn install -q -DskipTests=true
-- mvn test
