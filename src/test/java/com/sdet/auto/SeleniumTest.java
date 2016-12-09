@@ -8,11 +8,11 @@ import org.junit.Test;
 public class SeleniumTest extends TestBaseClass{
 
     @Test
-    public void TC0001_Smoketest() {
+    public void TC0001_SmokeTest() {
 
         GuiHelper.OpenWebBrowser();
         Navigation.NavToWebPageUnderTest();
-        HomePage.VerifyOnHomePage();
+        HomePage.VerifyOnHomePage(testAssert);
         GuiHelper.CloseWebBrowser();
     }
 }

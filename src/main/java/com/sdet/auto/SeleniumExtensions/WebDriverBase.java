@@ -25,12 +25,12 @@ public class WebDriverBase {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--start-maximized");
             options.addArguments("--disable-extensions");
-            System.setProperty("webdriver.chrome.driver", "target/classes/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
             driver = new ChromeDriver(options);
             driver.manage().deleteAllCookies();
 
         } else if(browser.equals("firefox")) {
-            System.setProperty("webdriver.gecko.driver", "target/classes/geckodriver");
+            System.setProperty("webdriver.gecko.driver", "src/main/resources/geckodriver");
             IoLibrary.writeLine("Launching Firefox Browser.");
             driver = new FirefoxDriver();
             driver.manage().window().maximize();
