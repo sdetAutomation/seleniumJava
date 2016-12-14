@@ -7,8 +7,8 @@ import org.openqa.selenium.By;
 
 public class SecureAreaPage extends WebDriverBase {
 
-    private static String lblMessage = "#flash";
-    private static String btnLobout = ".icon-2x.icon-signout";
+    private final static String lblMessage = "#flash";
+    private final static String btnLobout = ".icon-2x.icon-signout";
 
     public static void VerifyMessage(TestAssert testAssert, String expectedMsg){
 

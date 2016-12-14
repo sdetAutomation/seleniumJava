@@ -5,8 +5,8 @@ import org.openqa.selenium.By;
 
 public class ForgetPasswordPage extends WebDriverBase{
 
-    private static String txtEmail = "#email";
-    private static String btnRetrievePassword = ".icon-2x.icon-signin";
+    private final static String txtEmail = "#email";
+    private final static String btnRetrievePassword = ".icon-2x.icon-signin";
 
     public static void EnterEmail(String email){
 
