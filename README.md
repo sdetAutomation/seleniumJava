@@ -13,7 +13,25 @@ Selenium Startup Project for Java
 
 Introduction
 ------------
-This project is made for anyone who is looking for a starting point for writing functional tests using Selenium WebDriver and Java.  
+This project is made for anyone who is looking for a starting point for writing functional tests using Selenium WebDriver and Java.
+
+This projet was written using IntelliJ IDEA Community Edition.   
+
+
+Project Packages
+-----
+* PageObjects:  
+Contains class files for each web page being tested.  Page element definitions / mappings, and functions for interacting with page elements.
+ 
+* SeleniumExtensions:  
+Contains helper function to instantiate WebDriver to the appropriate browser type.  In the future, WebDriverExensions class will contain helper functions to handle driver waits for page elements conditions. 
+
+* TestHelper:  
+    - ConfigSettings: contains helper functions for reading config.properties.  
+    - IoLibrary: contains helper functions used across tests.  
+    - LoggingLibrary: contains custom functions for comparing actual to expected conditions.  
+    - TestAssert: Is a custom assert, used to track if a verification point has failed.  The class variable is latched, once set to false it will remain false for the remainder of the test run. 
+
 
 Maven Java Project
 -----
@@ -21,6 +39,7 @@ This project is written in Java and tests can be executed using Maven commands.
 
     mvn clean
     mvn test
+
 
 Page Object Model
 -----
