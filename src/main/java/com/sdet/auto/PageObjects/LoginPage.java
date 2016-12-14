@@ -7,10 +7,10 @@ import org.openqa.selenium.By;
 
 public class LoginPage extends WebDriverBase{
 
-    private static String txtUsername = "#username";
-    private static String txtPassword = "#password";
-    private static String btnLogin = ".fa.fa-2x.fa-sign-in";
-    private static String lblMessage = "#flash";
+    private final static String txtUsername = "#username";
+    private final static String txtPassword = "#password";
+    private final static String btnLogin = ".fa.fa-2x.fa-sign-in";
+    private final static String lblMessage = "#flash";
 
     public static void EnterCredentials(String userId, String password){
 
