@@ -6,7 +6,17 @@ import org.openqa.selenium.By;
 
 public class HomePage extends WebDriverBase{
 
-    private static final String txtHeader = "#content h1";
+    private final static String txtHeader = "#content h1";
+    private final static String linkForgetPassword = "[href=\'/forgot_password\']";
+    private final static String linkFormAuthentication = "[href=\'/login\']";
+
+    public static void ClickForgetPassword(){
+        driver.findElement(By.cssSelector(linkForgetPassword)).click();
+    }
+
+    public static void ClickFormAuthentication(){
+        driver.findElement(By.cssSelector(linkFormAuthentication)).click();
+    }
 
     public static void VerifyOnHomePage(TestAssert testAssert) {
 
