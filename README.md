@@ -39,7 +39,7 @@ A web hook has been setup with Travis CI for all Push and Pull Requests.
  
 Selenium WebDriver
 ------------
-This project is configured to use Firefox & Chrome WebDriver's.  The default is set to Chrome.  The WebDriver exe's added to this project will only work on macos.  
+This project is configured to use Firefox & Chrome WebDriver's.  The default is set to Chrome.  The WebDriver's added to this project will only work on macos.  
 
 
 Selenium Grid
