@@ -34,7 +34,7 @@ public class SeleniumTest extends TestBaseClass{
     public void TC0003_FormAuthentication() {
 
         final String userId = "tomsmith";
-        final String password = "SuperSecretPassword!";
+        final String password = "seleniumJavaPassword!";
         final String expectedLoginMsg = "You logged into a secure area!";
         final String expectedLogoutMsg = "You logged out of the secure area!";
 
