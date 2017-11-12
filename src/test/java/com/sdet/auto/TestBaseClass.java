@@ -13,6 +13,16 @@ public class TestBaseClass {
 
     public TestAssert testAssert;
 
+    @Rule
+    public TestRule watcher = new TestWatcher() {
+        protected void starting(Description description) {
+            System.out.println(" ");
+            System.out.println("--------------------------------------------");
+            System.out.println("Starting Test: " + description.getMethodName());
+            System.out.println("--------------------------------------------");
+        }
+    };
+
     @BeforeClass
     public static void MyClassInitialize() throws IOException {
         ConfigSettings configSettings = new ConfigSettings();
