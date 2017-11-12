@@ -25,6 +25,7 @@ public class WebDriverBase {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--start-maximized");
             options.addArguments("--disable-extensions");
+            options.addArguments("disable-infobars");
             System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
             driver = new ChromeDriver(options);
             driver.manage().deleteAllCookies();
@@ -42,6 +43,7 @@ public class WebDriverBase {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--start-maximized");
             options.addArguments("--disable-extensions");
+            options.addArguments("disable-infobars");
             DesiredCapabilities capabilities = DesiredCapabilities.chrome();
             capabilities.setCapability(ChromeOptions.CAPABILITY, options);
             try {
