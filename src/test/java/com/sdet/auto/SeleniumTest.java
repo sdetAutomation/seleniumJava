@@ -1,9 +1,11 @@
 package com.sdet.auto;
 
 import com.sdet.auto.PageObjects.*;
+import org.junit.FixMethodOrder;
 import org.junit.Test;
-import sun.rmi.runtime.Log;
+import org.junit.runners.MethodSorters;
 
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class SeleniumTest extends TestBaseClass{
 
     @Test
