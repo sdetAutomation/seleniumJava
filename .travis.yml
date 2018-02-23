@@ -1,5 +1,5 @@
 language: java
 sudo: false
 script:
-- mvn clean
-- mvn install -DskipTests
+- ./mvnw clean
+- ./mvnw install -DskipTests
