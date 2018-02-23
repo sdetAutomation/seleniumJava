@@ -33,12 +33,12 @@ Contains helper function to instantiate WebDriver to the appropriate browser typ
     - TestAssert: Is a custom assert, used to track if a verification point has failed.  The class variable is latched, once set to false it will remain false for the remainder of the test run. 
 
 
-Maven Java Project
+Maven Java Project / Maven Wrapper
 -----
 This project is written in Java and tests can be executed using Maven commands. 
 
-    mvn clean
-    mvn test
+    ./mvnw clean
+    ./mvnw test
 
 
 Page Object Model
