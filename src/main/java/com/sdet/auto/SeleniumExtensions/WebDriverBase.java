@@ -2,7 +2,6 @@ package com.sdet.auto.SeleniumExtensions;
 
 
 import com.sdet.auto.TestHelper.IoLibrary;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -17,7 +16,7 @@ public class WebDriverBase {
 
     public static WebDriver driver;
 
-    public static void GetWebDriver(String browser) {
+    public static void getWebDriver(String browser) {
 
         if(browser.equals("chrome")) {
 
@@ -56,5 +55,11 @@ public class WebDriverBase {
         } else {
             throw new RuntimeException(String.format("Browser Type %s, not Found, please add additional code for this desired WebDriver Type.", browser));
         }
+    }
+
+    public static void getWebDriver (WebDriver chrome){
+        driver = chrome;
+        driver.manage().deleteAllCookies();
+        driver.manage().window().maximize();
     }
 }

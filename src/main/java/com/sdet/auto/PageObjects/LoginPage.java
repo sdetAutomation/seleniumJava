@@ -12,14 +12,14 @@ public class LoginPage extends WebDriverBase{
     private final static String btnLogin = ".fa.fa-2x.fa-sign-in";
     private final static String lblMessage = "#flash";
 
-    public static void EnterCredentials(String userId, String password){
+    public static void enterCredentials(String userId, String password){
 
         driver.findElement(By.cssSelector(txtUsername)).sendKeys(userId);
         driver.findElement(By.cssSelector(txtPassword)).sendKeys(password);
         driver.findElement(By.cssSelector(btnLogin)).click();
     }
 
-    public static void VerifyMessage(TestAssert testAssert, String expectedMsg){
+    public static void verifyMessage(TestAssert testAssert, String expectedMsg){
 
         testAssert.setPass(LoggingLibrary.CompareResultContains(driver.findElement(By.cssSelector(lblMessage)).getText(), expectedMsg));
     }

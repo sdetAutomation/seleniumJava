@@ -10,12 +10,12 @@ public class SecureAreaPage extends WebDriverBase {
     private final static String lblMessage = "#flash";
     private final static String btnLobout = ".icon-2x.icon-signout";
 
-    public static void VerifyMessage(TestAssert testAssert, String expectedMsg){
+    public static void verifyMessage(TestAssert testAssert, String expectedMsg){
 
         testAssert.setPass(LoggingLibrary.CompareResultContains(driver.findElement(By.cssSelector(lblMessage)).getText(), expectedMsg));
     }
 
-    public static void ClickLogoutButton(){
+    public static void clickLogoutButton(){
 
         driver.findElement(By.cssSelector(btnLobout)).click();
     }

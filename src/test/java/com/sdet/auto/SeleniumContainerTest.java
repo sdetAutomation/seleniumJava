@@ -6,12 +6,13 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class SeleniumTest extends TestBaseClass{
+public class SeleniumContainerTest extends TestBaseClassForContainer {
+
 
     @Test
     public void TC0001_SmokeTest() {
 
-        GuiHelper.openWebBrowser();
+        GuiHelper.openWebBrowser(driver);
         Navigation.navToWebPageUnderTest();
         HomePage.VerifyOnHomePage(testAssert);
         GuiHelper.closeWebBrowser();
@@ -23,7 +24,7 @@ public class SeleniumTest extends TestBaseClass{
         final String email = "sdet.testautomation@gmail.com";
         final String expectedMsg = "Your e-mail's been sent!";
 
-        GuiHelper.openWebBrowser();
+        GuiHelper.openWebBrowser(driver);
         Navigation.navToWebPageUnderTest();
         HomePage.ClickForgetPassword();
         ForgetPasswordPage.EnterEmail(email);
@@ -40,7 +41,7 @@ public class SeleniumTest extends TestBaseClass{
         final String expectedLoginMsg = "You logged into a secure area!";
         final String expectedLogoutMsg = "You logged out of the secure area!";
 
-        GuiHelper.openWebBrowser();
+        GuiHelper.openWebBrowser(driver);
         Navigation.navToWebPageUnderTest();
         HomePage.clickFormAuthentication();
         LoginPage.enterCredentials(userId, password);
@@ -57,7 +58,7 @@ public class SeleniumTest extends TestBaseClass{
         final String password = "pass@word";
         final String expectedMsg = "Your username is invalid!";
 
-        GuiHelper.openWebBrowser();
+        GuiHelper.openWebBrowser(driver);
         Navigation.navToWebPageUnderTest();
         HomePage.clickFormAuthentication();
         LoginPage.enterCredentials(userId, password);
