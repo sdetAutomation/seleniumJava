@@ -15,7 +15,7 @@ public class HomePage extends WebDriverBase{
         driver.findElement(By.cssSelector(linkForgetPassword)).click();
     }
 
-    public static void ClickFormAuthentication(){
+    public static void clickFormAuthentication(){
         driver.findElement(By.cssSelector(linkFormAuthentication)).click();
     }
 

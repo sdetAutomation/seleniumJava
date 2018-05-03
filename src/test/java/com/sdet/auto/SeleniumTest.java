@@ -11,10 +11,10 @@ public class SeleniumTest extends TestBaseClass{
     @Test
     public void TC0001_SmokeTest() {
 
-        GuiHelper.OpenWebBrowser();
-        Navigation.NavToWebPageUnderTest();
+        GuiHelper.openWebBrowser();
+        Navigation.navToWebPageUnderTest();
         HomePage.VerifyOnHomePage(testAssert);
-        GuiHelper.CloseWebBrowser();
+        GuiHelper.closeWebBrowser();
     }
 
     @Test
@@ -23,13 +23,13 @@ public class SeleniumTest extends TestBaseClass{
         final String email = "sdet.testautomation@gmail.com";
         final String expectedMsg = "Your e-mail's been sent!";
 
-        GuiHelper.OpenWebBrowser();
-        Navigation.NavToWebPageUnderTest();
+        GuiHelper.openWebBrowser();
+        Navigation.navToWebPageUnderTest();
         HomePage.ClickForgetPassword();
         ForgetPasswordPage.EnterEmail(email);
         ForgetPasswordPage.ClickRetrieveButton();
         EmailSentPage.VerifyEmailSent(testAssert, expectedMsg);
-        GuiHelper.CloseWebBrowser();
+        GuiHelper.closeWebBrowser();
     }
 
     @Test
@@ -40,14 +40,14 @@ public class SeleniumTest extends TestBaseClass{
         final String expectedLoginMsg = "You logged into a secure area!";
         final String expectedLogoutMsg = "You logged out of the secure area!";
 
-        GuiHelper.OpenWebBrowser();
-        Navigation.NavToWebPageUnderTest();
-        HomePage.ClickFormAuthentication();
-        LoginPage.EnterCredentials(userId, password);
-        SecureAreaPage.VerifyMessage(testAssert, expectedLoginMsg);
-        SecureAreaPage.ClickLogoutButton();
-        LoginPage.VerifyMessage(testAssert, expectedLogoutMsg);
-        GuiHelper.CloseWebBrowser();
+        GuiHelper.openWebBrowser();
+        Navigation.navToWebPageUnderTest();
+        HomePage.clickFormAuthentication();
+        LoginPage.enterCredentials(userId, password);
+        SecureAreaPage.verifyMessage(testAssert, expectedLoginMsg);
+        SecureAreaPage.clickLogoutButton();
+        LoginPage.verifyMessage(testAssert, expectedLogoutMsg);
+        GuiHelper.closeWebBrowser();
     }
 
     @Test
@@ -57,11 +57,11 @@ public class SeleniumTest extends TestBaseClass{
         final String password = "pass@word";
         final String expectedMsg = "Your username is invalid!";
 
-        GuiHelper.OpenWebBrowser();
-        Navigation.NavToWebPageUnderTest();
-        HomePage.ClickFormAuthentication();
-        LoginPage.EnterCredentials(userId, password);
-        LoginPage.VerifyMessage(testAssert, expectedMsg);
-        GuiHelper.CloseWebBrowser();
+        GuiHelper.openWebBrowser();
+        Navigation.navToWebPageUnderTest();
+        HomePage.clickFormAuthentication();
+        LoginPage.enterCredentials(userId, password);
+        LoginPage.verifyMessage(testAssert, expectedMsg);
+        GuiHelper.closeWebBrowser();
     }
 }
