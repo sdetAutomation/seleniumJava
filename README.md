@@ -15,7 +15,7 @@ Introduction
 ------------
 This project is made for anyone who is looking for a starting point for writing functional tests using Selenium WebDriver and Java.
 
-This projet was written using IntelliJ IDEA Community Edition.   
+This project was written using IntelliJ IDEA Community Edition.   
 
 
 Project Packages
