@@ -31,7 +31,6 @@ public class TestBaseClassForContainer {
 
     @Rule
     public BrowserWebDriverContainer chrome = new BrowserWebDriverContainer()
-            .withDesiredCapabilities(DesiredCapabilities.chrome())
             .withRecordingMode(RECORD_ALL, new File("target"));
 
     @BeforeClass
