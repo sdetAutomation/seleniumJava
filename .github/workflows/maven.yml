@@ -14,6 +14,6 @@ jobs:
       with:
         java-version: 1.8
     - name: Build with Maven
-      run: ./mvnw clean install -DskipTests
-           ./mvnw surefire:test -Dgroups="com.sdet.auto.groups.ContainersTest"
+      run: mvn clean install -DskipTests
+           mvn surefire:test -Dgroups="com.sdet.auto.groups.ContainersTest"
 
