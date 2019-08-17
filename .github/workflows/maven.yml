@@ -10,25 +10,7 @@ jobs:
     - name: Set up JDK 1.8
       uses: actions/setup-java@v1
       with:
-        java-version: 1.8
+    java-version: 1.8
     - name: Build with Maven
     - run:  ./mvnw clean install -DskipTests
-    - run: ./mvnw surefire:test -Dgroups="com.sdet.auto.groups.ContainersTest"
-
-#  on: [push]
-#
-#  push:
-#    branches:
-#      - master
-#  jobs:
-#    build:
-#      runs-on: ubuntu-latest
-#      steps:
-#        - uses: actions/checkout@v1
-#        - name: Set up JDK 1.8
-#          uses: actions/setup-java@v1
-#          with:
-#            java-version: 1.8
-#        - name: Build with Maven
-#        - run:  ./mvnw surefire:test -Dgroups="com.sdet.auto.groups.ContainersTest"
-
+#     run: ./mvnw surefire:test -Dgroups="com.sdet.auto.groups.ContainersTest"
