@@ -1,6 +1,8 @@
 name: Java CI
 
-on: [push]
+push:
+  branches:
+    - !refs/push/*
 
 jobs:
   build:
@@ -16,5 +18,5 @@ jobs:
     - name: Build with Maven
     - run: |
         ./mvnw clean install -DskipTests
-#        ./mvnw surefire:test -Dgroups="com.sdet.auto.groups.ContainersTest"
+  #        ./mvnw surefire:test -Dgroups="com.sdet.auto.groups.ContainersTest"
 
