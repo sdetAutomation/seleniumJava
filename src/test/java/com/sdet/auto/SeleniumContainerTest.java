@@ -3,9 +3,11 @@ package com.sdet.auto;
 import com.sdet.auto.PageObjects.*;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 import org.junit.runners.MethodSorters;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
+@Category(com.sdet.auto.groups.ContainersTest.class)
 public class SeleniumContainerTest extends TestBaseClassForContainer {
 
 
