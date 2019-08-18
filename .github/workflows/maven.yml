@@ -16,5 +16,5 @@ jobs:
     - name: Build with Maven
       run: ./mvnw clean install -DskipTests
     - name: Execute test using TestContainers
-      run: surefire:test -Dgroups="com.sdet.auto.groups.ContainersTest"
+      run: ./mvnw surefire:test -Dgroups="com.sdet.auto.groups.ContainersTest"
 
