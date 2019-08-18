@@ -13,7 +13,7 @@ jobs:
       uses: actions/setup-java@v1
       with:
         java-version: 1.8
-    - name: Build with Maven
+    - name: Build with Maven Wrapper
       run: ./mvnw clean install -DskipTests
     - name: Execute test using TestContainers
       run: ./mvnw surefire:test -Dgroups="com.sdet.auto.groups.ContainersTest"
