@@ -10,6 +10,7 @@
 # seleniumJava
 Selenium Startup Project for Java
 
+[![Build Status](https://travis-ci.org/sdetAutomation/seleniumJava.svg?branch=master)](https://travis-ci.org/sdetAutomation/seleniumJava)
 
 Introduction
 ------------
