@@ -6,6 +6,6 @@ import com.sdet.auto.TestHelper.ConfigSettings;
 public class Navigation extends WebDriverBase{
 
     public static void navToWebPageUnderTest(){
-        driver.get(ConfigSettings.getWebUrl());
+        driver.navigate().to(ConfigSettings.getWebUrl());
     }
 }

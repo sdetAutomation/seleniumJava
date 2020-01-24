@@ -25,7 +25,7 @@ Project Packages
 Contains class files for each web page being tested.  Page element definitions / mappings, and functions for interacting with page elements.
  
 * SeleniumExtensions:  
-Contains helper function to instantiate WebDriver to the appropriate browser type.  In the future, WebDriverExensions class will contain helper functions to handle driver waits for page elements conditions. 
+Contains helper function to instantiate WebDriver to the appropriate browser type.  WebDriverExtensions class contains helper functions to handle driver waits for page elements conditions. 
 
 * TestHelper:  
     - ConfigSettings: contains helper functions for reading config.properties.  

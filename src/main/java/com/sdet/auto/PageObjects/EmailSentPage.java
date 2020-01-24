@@ -1,17 +1,15 @@
 package com.sdet.auto.PageObjects;
 
-
-import com.sdet.auto.SeleniumExtensions.WebDriverBase;
+import com.sdet.auto.SeleniumExtensions.WebDriverExtensions;
 import com.sdet.auto.TestHelper.LoggingLibrary;
 import com.sdet.auto.TestHelper.TestAssert;
-import org.openqa.selenium.By;
 
-public class EmailSentPage extends WebDriverBase{
+public class EmailSentPage extends WebDriverExtensions {
 
     private final static String txtMessage = "#content";
 
     public static void VerifyEmailSent(TestAssert testAssert, String expectedMsg){
 
-        testAssert.setPass(LoggingLibrary.CompareResult(driver.findElement(By.cssSelector(txtMessage)).getText(), expectedMsg));
+        testAssert.setPass(LoggingLibrary.CompareResult(getElementBySelector(txtMessage).getText(), expectedMsg));
     }
 }

@@ -106,6 +106,14 @@
         <configuration>
           <!--<redirectTestOutputToFile>true</redirectTestOutputToFile>-->
           <disableXmlReport>false</disableXmlReport>
+          <parallel>classes</parallel>
+          <threadCountClasses>1</threadCountClasses>
+          <!--specify how many threads to use-->
+          <!--<threadCount>8</threadCount>-->
+          <useUnlimitedThreads>true</useUnlimitedThreads>
+          <perCoreThreadCount>true</perCoreThreadCount>
+          <rerunFailingTestsCount>1</rerunFailingTestsCount>
+          <reuseForks>false</reuseForks>
         </configuration>
       </plugin>
       <plugin>
@@ -137,7 +145,7 @@
     <pluginRepository>
       <id>central</id>
       <name>Maven Plugin Repository</name>
-      <url>http://repo1.maven.org/maven2</url>
+      <url>https://repo1.maven.org/maven2</url>
       <layout>default</layout>
       <snapshots>
         <enabled>false</enabled>
