@@ -1,6 +1,7 @@
 package com.sdet.auto;
 
 import com.sdet.auto.TestHelper.ConfigSettings;
+import com.sdet.auto.TestHelper.IoLibrary;
 import com.sdet.auto.TestHelper.TestAssert;
 import org.junit.*;
 import org.junit.rules.TestRule;
@@ -20,6 +21,7 @@ public class TestBaseClass {
             System.out.println("--------------------------------------------");
             System.out.println("Starting Test: " + description.getMethodName());
             System.out.println("--------------------------------------------");
+            IoLibrary.setTestName(description.getMethodName());
         }
     };
 

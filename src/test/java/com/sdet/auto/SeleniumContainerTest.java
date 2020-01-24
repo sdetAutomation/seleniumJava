@@ -10,7 +10,6 @@ import org.junit.runners.MethodSorters;
 @Category(com.sdet.auto.groups.ContainersTest.class)
 public class SeleniumContainerTest extends TestBaseClassForContainer {
 
-
     @Test
     public void TC0001_SmokeTest() {
 

@@ -106,30 +106,38 @@
         <configuration>
           <!--<redirectTestOutputToFile>true</redirectTestOutputToFile>-->
           <disableXmlReport>false</disableXmlReport>
+          <parallel>classes</parallel>
+          <threadCountClasses>1</threadCountClasses>
+          <!--specify how many threads to use-->
+          <!--<threadCount>8</threadCount>-->
+          <useUnlimitedThreads>true</useUnlimitedThreads>
+          <perCoreThreadCount>true</perCoreThreadCount>
+          <rerunFailingTestsCount>1</rerunFailingTestsCount>
+          <reuseForks>false</reuseForks>
         </configuration>
       </plugin>
-      <plugin>
-        <groupId>com.github.webdriverextensions</groupId>
-        <artifactId>webdriverextensions-maven-plugin</artifactId>
-        <version>3.2.0</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>install-drivers</goal>
-            </goals>
-          </execution>
-        </executions>
-        <configuration>
-          <installationDirectory>${project.build.directory}/drivers</installationDirectory>
-          <keepDownloadedWebdrivers>true</keepDownloadedWebdrivers>
-          <drivers>
-            <driver>
-              <name>chromedriver</name>
-              <version>76.0.3809.68</version>
-            </driver>
-          </drivers>
-        </configuration>
-      </plugin>
+<!--      <plugin>-->
+<!--        <groupId>com.github.webdriverextensions</groupId>-->
+<!--        <artifactId>webdriverextensions-maven-plugin</artifactId>-->
+<!--        <version>3.2.0</version>-->
+<!--        <executions>-->
+<!--          <execution>-->
+<!--            <goals>-->
+<!--              <goal>install-drivers</goal>-->
+<!--            </goals>-->
+<!--          </execution>-->
+<!--        </executions>-->
+<!--        <configuration>-->
+<!--          <installationDirectory>${project.build.directory}/driver</installationDirectory>-->
+<!--          <keepDownloadedWebdrivers>true</keepDownloadedWebdrivers>-->
+<!--          <drivers>-->
+<!--            <driver>-->
+<!--              <name>chromedriver</name>-->
+<!--              <version>76.0.3809.68</version>-->
+<!--            </driver>-->
+<!--          </drivers>-->
+<!--        </configuration>-->
+<!--      </plugin>-->
     </plugins>
   </build>
 
@@ -137,7 +145,7 @@
     <pluginRepository>
       <id>central</id>
       <name>Maven Plugin Repository</name>
-      <url>http://repo1.maven.org/maven2</url>
+      <url>https://repo1.maven.org/maven2</url>
       <layout>default</layout>
       <snapshots>
         <enabled>false</enabled>

@@ -1,12 +1,12 @@
 package com.sdet.auto;
 
 import com.sdet.auto.TestHelper.ConfigSettings;
+import com.sdet.auto.TestHelper.IoLibrary;
 import com.sdet.auto.TestHelper.TestAssert;
 import org.junit.*;
 import org.junit.rules.TestRule;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testcontainers.containers.BrowserWebDriverContainer;
 import java.io.File;
@@ -26,6 +26,7 @@ public class TestBaseClassForContainer {
             System.out.println("--------------------------------------------");
             System.out.println("Starting Test: " + description.getMethodName());
             System.out.println("--------------------------------------------");
+            IoLibrary.setTestName(description.getMethodName());
         }
     };
 
