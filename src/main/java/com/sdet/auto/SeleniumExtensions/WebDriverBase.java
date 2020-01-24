@@ -23,7 +23,7 @@ public class WebDriverBase {
             options.addArguments("--start-maximized");
             options.addArguments("--disable-extensions");
             options.addArguments("disable-infobars");
-            System.setProperty("webdriver.chrome.driver", "target/driver/chromedriver-mac-64bit");
+            System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver");
             driver = new ChromeDriver(options);
             driver.manage().deleteAllCookies();
 
