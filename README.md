@@ -12,6 +12,8 @@ Selenium Startup Project for Java
 
 [![Build Status](https://travis-ci.org/sdetAutomation/seleniumJava.svg?branch=master)](https://travis-ci.org/sdetAutomation/seleniumJava)
 
+[![Java CI](https://github.com/sdetAutomation/seleniumJava/workflows/Java%20CI/badge.svg)](https://github.com/sdetAutomation/seleniumJava/actions)
+
 Introduction
 ------------
 This project is made for anyone who is looking for a starting point for writing functional tests using Selenium WebDriver and Java.
