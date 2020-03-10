@@ -20,7 +20,7 @@ public class AccessibilityHelper {
         } else {
             AXE.writeResults("FAIL: " + IoLibrary.getTestName(), responseJSON);
             testAssert.setPass(false);
-            IoLibrary.writeLine(AXE.report(violations));
+            IoLibrary.writeLine("FAIL: " + IoLibrary.getTestName() + " " + AXE.report(violations));
         }
     }
 }
