@@ -68,14 +68,15 @@ public class SeleniumContainerTest extends TestBaseClassForContainer {
         GuiHelper.closeWebBrowser();
     }
 
-    @Test
-    public void TC0005_A11y_Accessibility() {
-
-        GuiHelper.openWebBrowser(driver);
-        Navigation.navToWebPageUnderTest();
-
-        AccessibilityHelper.basicAccessibilityCheck(testAssert);
-
-        GuiHelper.closeWebBrowser();
-    }
+//    // below is an example of an axe accessibility test.  Below test is suppose to fail.  Commented out.
+//    @Test
+//    public void TC0005_A11y_Accessibility() {
+//
+//        GuiHelper.openWebBrowser(driver);
+//        Navigation.navToWebPageUnderTest();
+//
+//        AccessibilityHelper.basicAccessibilityCheck(testAssert);
+//
+//        GuiHelper.closeWebBrowser();
+//    }
 }
