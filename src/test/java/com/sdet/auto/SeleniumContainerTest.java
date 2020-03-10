@@ -1,6 +1,7 @@
 package com.sdet.auto;
 
 import com.sdet.auto.PageObjects.*;
+import com.sdet.auto.TestHelper.AccessibilityHelper;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -64,6 +65,17 @@ public class SeleniumContainerTest extends TestBaseClassForContainer {
         HomePage.clickFormAuthentication();
         LoginPage.enterCredentials(userId, password);
         LoginPage.verifyMessage(testAssert, expectedMsg);
+        GuiHelper.closeWebBrowser();
+    }
+
+    @Test
+    public void TC0005_A11y_Accessibility() {
+
+        GuiHelper.openWebBrowser(driver);
+        Navigation.navToWebPageUnderTest();
+
+        AccessibilityHelper.basicAccessibilityCheck(testAssert);
+
         GuiHelper.closeWebBrowser();
     }
 }
