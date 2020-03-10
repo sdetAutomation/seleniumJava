@@ -56,8 +56,9 @@ Accessibility Testing
 ------------
 This project uses [axe-selenium](https://github.com/dequelabs/axe-selenium-java) package for accessibility testing.
 
-View accessibility test: [click here](https://github.com/sdetAutomation/seleniumJava/blob/master/src/test/java/com/sdet/auto/SeleniumTest.java#L69-L78)
+View accessibility test code: [click here](https://github.com/sdetAutomation/seleniumJava/blob/master/src/test/java/com/sdet/auto/SeleniumTest.java#L69-L78)
    
+View accessibility helper function: [AccessibilityHelper.basicAccessibilityCheck()](https://github.com/sdetAutomation/seleniumJava/blob/master/src/main/java/com/sdet/auto/TestHelper/AccessibilityHelper.java)
 
 Continuous Integration(CI)
 ------------
